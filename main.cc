@@ -73,7 +73,8 @@ void ReadFile( Heap<int>*& heap )
 	cout << "Enter filename: ";
 	cin >> filename;
 	
-	heap->loadFromFile( filename );
+	if ( heap->loadFromFile( filename ) == 1 )
+		cerr << "File failed to load!";
 	
 	cout << endl;
 }
